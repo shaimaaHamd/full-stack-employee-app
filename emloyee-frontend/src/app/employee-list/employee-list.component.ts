@@ -190,7 +190,6 @@ export class EmployeeListComponent implements OnInit {
     this.temp = temp;
   }
   updateFilterStatus(): void{
- //   const val = event.target.value.toString().toLowerCase();
     console.log(this.statusValue);
     this.temp = this.employees;
     const temp = this.temp.filter(item => {
@@ -199,10 +198,6 @@ export class EmployeeListComponent implements OnInit {
     this.temp = temp;
   }
 
-  // tslint:disable-next-line:typedef
-  employeeDetails(id: number){
-    this.router.navigate(['employee-details', id]);
-  }
 
   // tslint:disable-next-line:typedef
   updateEmployee(id: number){
