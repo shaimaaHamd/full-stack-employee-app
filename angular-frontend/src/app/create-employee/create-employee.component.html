@@ -1,0 +1,83 @@
+<div   style="align-items: baseline;">
+    <h3> Create Employee </h3>
+<!--    <form (ngSubmit) = "onSubmit()">-->
+
+<!--        <div class="form-group">-->
+<!--            <label> Employee Code</label>-->
+<!--            <input type="text" class ="form-control" id = "eCode"-->
+<!--                [(ngModel)] = "employee.employeeCode" name = "eCode">-->
+<!--        </div>-->
+
+<!--        <div class="form-group">-->
+<!--            <label> Last Name</label>-->
+<!--            <input type="text" class ="form-control" id = "lastName"-->
+<!--                [(ngModel)] = "employee.employeeCode" name = "lastName">-->
+<!--        </div>-->
+
+<!--        <div class="form-group">-->
+<!--            <label> Email Id</label>-->
+<!--            <input type="text" class ="form-control" id = "emailId"-->
+<!--                [(ngModel)] = "employee.jobTitle" name = "emailId">-->
+<!--        </div>-->
+
+<!--        <button class = "btn btn-success" type ="submit">Submit</button>-->
+
+<!--    </form>-->
+  <form (ngSubmit) = "onSubmit()" >
+    <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+      <div style="width:100%;">
+        <mat-form-field class="cellContainer">
+          <input  matInput placeholder="Employee Code"  [(ngModel)]='employee.employeeCode' name="eCode" >
+        </mat-form-field>
+        <mat-form-field class="cellContainer">
+          <input matInput placeholder="Employee Name"  [(ngModel)]='employee.name' name="eName" >
+        </mat-form-field>
+      </div>
+      <div>
+                <mat-form-field class="cellContainer">
+                  <input matInput placeholder="Birth Date" type="date"   [(ngModel)]="employee.birthDate" name="eDate" >
+                </mat-form-field>
+                <mat-form-field class="cellContainer">
+                  <mat-select placeholder="Birth City"  [(ngModel)]="employee.birthCity" name="birthCity" >
+                    <mat-option *ngFor="let city of birthCities"  [value]="city">
+                      {{city.birthCity}}
+                    </mat-option>
+                  </mat-select>
+                </mat-form-field>
+      </div>
+      <div style="width:100%;">
+
+        <mat-form-field  class="cellContainer">
+          <mat-select placeholder="Department"  [(ngModel)]="employee.department" name="department">
+            <mat-option *ngFor="let department of departments" [value]="department">
+              {{department.department}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="cellContainer">
+          <input matInput placeholder="Job Title"  [(ngModel)]='employee.jobTitle' name="eTitle">
+        </mat-form-field>
+        <mat-form-field class="cellContainer">
+          <input matInput placeholder="Direct Manger"  [(ngModel)]='employee.directManger' name="eManger">
+        </mat-form-field>
+      </div>
+      <div style="width:100%;">
+        <mat-form-field class="cellContainer">
+          <mat-select placeholder="Contract Type" [(ngModel)]="employee.contractType" name="contract" >
+            <mat-option *ngFor="let type of types"   [value]="type" >
+              {{type.contractType}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <mat-form-field class="cellContainer">
+          <mat-select placeholder="Status"  [(ngModel)]="status" name="statusValue" >
+            <mat-option *ngFor="let status of statuses"  [value]="status"  >
+              {{status.status}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <button class = "btn btn-success" type ="submit">Submit</button>
+  </form>
+    </div>

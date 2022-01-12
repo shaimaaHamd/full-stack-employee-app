@@ -1,0 +1,106 @@
+
+<div fxFlex.gt-sm="100" fxFlex.gt-xs="100" fxFlex="100">
+  <div >
+    <mat-card style="margin-bottom: 5%">
+      <div class="card-content">
+        <form >
+          <div fxLayout="row wrap" fxLayoutAlign="space-between center">
+            <div style="width:100%;">
+              <mat-form-field class="cellContainer">
+                <input  matInput placeholder="Employee Code" (keyup)='updateFilterCode($event)'  >
+              </mat-form-field>
+              <mat-form-field class="cellContainer">
+                <input matInput placeholder="Employee Name" (keyup)='updateFilterName($event)' >
+              </mat-form-field>
+              <mat-form-field class="cellContainer">
+                <input matInput placeholder="Birth Date" type="date"  (change) ='updateFilterDate($event)' [(ngModel)]="eDate" name="eDate" >
+              </mat-form-field>
+              <mat-form-field class="cellContainer">
+                <mat-select placeholder="Birth City" (closed)="updateFilterCty()"  [(ngModel)]="cityValue" name="city">
+                  <mat-option *ngFor="let city of birthCities" [value]="city.birthCity">
+                    {{city.birthCity}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+            <div style="width:100%;">
+              <mat-form-field class="cellContainer">
+                <input matInput placeholder="Employee Id" (keyup)='updateFilterId($event)'  >
+              </mat-form-field>
+              <mat-form-field  class="cellContainer">
+                <mat-select placeholder="Department"  (closed)="updateFilterDepartment()"   [(ngModel)]="departmentValue" name="departmentValue">
+                  <mat-option *ngFor="let department of departments" [value]="department.department">
+                    {{department.department}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field class="cellContainer">
+                <input matInput placeholder="Job Title" (keyup)='updateFilterTitle($event)' [(ngModel)]="eTitle" name="eTitle">
+              </mat-form-field>
+              <mat-form-field class="cellContainer">
+                <input matInput placeholder="Direct Manger"(keyup)='updateFilterManger($event)' [(ngModel)]="eManger" name="eManger">
+              </mat-form-field>
+            </div>
+            <div style="width:100%;">
+              <mat-form-field class="cellContainer">
+                <mat-select placeholder="Contract Type"  (closed)='updateFilterType()' [(ngModel)]="typeValue" name="typeValue">
+                  <mat-option *ngFor="let type of types" [value]="type.contractType">
+                    {{type.contractType}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+              <mat-form-field class="cellContainer">
+                <mat-select placeholder="Status"  (closed)='updateFilterStatus()' [(ngModel)]="statusValue" name="statusValue">
+                  <mat-option *ngFor="let status of statuses" [value]="status">
+                    {{status.status}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
+          </div>
+        </form>
+      </div>
+    </mat-card>
+     <div class="table-responsive">
+      <table class="table table-hover table-middle th-fw-light mb-0">
+        <thead style="width:100%; background-color: grey;">
+        <tr>
+          <th > Employee Id </th>
+          <th> Employee Code </th>
+          <th> Employee Name</th>
+          <th> Birth Date </th>
+          <th> Birth City </th>
+          <th> Department  </th>
+          <th> Job Title </th>
+          <th> Direct Manger </th>
+          <th> Contract Type </th>
+          <th> Status </th>
+          <th> Action </th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor = "let employee of temp" >
+          <td> {{ employee.id }} </td>
+          <td> {{ employee.employeeCode }} </td>
+          <td> {{ employee.name }} </td>
+          <td> {{ employee.birthDate }} </td>
+          <td> {{ employee.birthCity.birthCity }} </td>
+          <td> {{ employee.department.department }} </td>
+          <td> {{ employee.jobTitle }} </td>
+          <td> {{ employee.directManger }} </td>
+          <td> {{ employee.contractType.contractType }} </td>
+          <td> {{ employee.status.status }}</td>
+          <td style='white-space: nowrap'>
+            <button  mat-icon-button (click)="updateEmployee(employee.id)">
+              <mat-icon class="material-icons md-18">edit</mat-icon>
+            </button>
+            <button mat-icon-button  (click)="deleteEmployee(employee.id)">
+              <mat-icon class="material-icons md-24" >delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
