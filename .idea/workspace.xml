@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="0c3d1ac6-78a6-4c31-9005-2c8fd08fb5fa" name="Changes" comment="commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emloyee-frontend/src/app/employee-list/employee-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/emloyee-frontend/src/app/employee-list/employee-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/emloyee-frontend/src/app/employee-list/employee-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/emloyee-frontend/src/app/employee-list/employee-list.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emloyee-frontend/src/app/create-employee/create-employee.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/emloyee-frontend/src/app/create-employee/create-employee.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emloyee-frontend/src/app/create-employee/create-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/emloyee-frontend/src/app/create-employee/create-employee.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/emloyee-frontend/src/app/update-employee/update-employee.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/emloyee-frontend/src/app/update-employee/update-employee.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +39,7 @@
       <workItem from="1642014461685" duration="945000" />
       <workItem from="1642015528897" duration="75000" />
       <workItem from="1642016681070" duration="486000" />
+      <workItem from="1642026044850" duration="605000" />
     </task>
     <task id="LOCAL-00001" summary="first">
       <created>1642015202371</created>

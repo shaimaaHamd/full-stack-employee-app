@@ -93,8 +93,6 @@ export class UpdateEmployeeComponent implements OnInit {
   }
 
   onSubmit(): void{
-    this.employee.id = 0;
-    console.log(this.employee);
-    this.saveEmployee();
+      this.saveEmployee();
   }
 }
